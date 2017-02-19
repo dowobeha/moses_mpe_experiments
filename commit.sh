@@ -1,6 +1,6 @@
 #!/bin/bash
 
-required_files="moses.ini static.pt static.lm client.py summary.txt log"
+required_files="client.py summary.txt"
 
 if (( $# == 1 )); then
 
@@ -23,14 +23,12 @@ else
 fi
 
 
-message="$(< ${dir}/summary.txt)"
+message="$(echo Condition ${dir} && echo && cat ${dir}/summary.txt)"
 
 echo "${message}"
 rm -f ${dir}/*~
 
-for file in ${required_files}; do
-    git add ${dir}/${file}
-done
+git add ${dir}
 
 git commit -m "${message}"
 
