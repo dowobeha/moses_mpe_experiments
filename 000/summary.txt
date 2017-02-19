@@ -1,0 +1,21 @@
+# Decoder 0
+Static PT
+Static LM
+
+# Decoder 1
+Dynamic PT (created from result of decoder 0)
+Static LM
+
+
+# Goal
+Capture the phrase table used by decoder 0 during decoding.
+Use that phrase table as the dynamic PT for decoder 1.
+Recreate the result of decoder 0 using decoder 1.
+
+# Status
+Success.
+
+# Next step:
+Use two dynamic PTs, one for positive PT and one for negative PT
+
+
