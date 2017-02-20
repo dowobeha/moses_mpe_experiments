@@ -1,0 +1,25 @@
+Calculate word alignments for dynamic PT
+
+# Decoder 0
+Static PT
+Static LM
+
+# Decoder 1
+Dynamic PT (created from result of decoder 0)
+Static LM
+
+
+# Goal
+Use a lexical PT to add alignment info into the generated dynamic PT
+
+# Status
+Success
+
+# Next step:
+Take a set of ranges (corresponding to annotated correct target segments),
+   and select which phrase table entries are consistent with those ranges.
+
+Those will constitute a positive dynamic PT.
+
+
+
